@@ -1,3 +1,4 @@
+import numpy as np
 import yfinance as yf
 
 def get_ticker_info(ticker_name, period="1mo", verbose=False):
@@ -5,7 +6,7 @@ def get_ticker_info(ticker_name, period="1mo", verbose=False):
         print(f"Bucando dados para {ticker_name} no período {period}...")
     
     ticker = yf.Ticker(ticker_name)
-    data = ticker.history(period=period)
+    data = ticker.history(period=period)[['Open', 'High', 'Low', 'Close', 'Volume']]
 
     if data.empty:
         if verbose:
@@ -14,8 +15,14 @@ def get_ticker_info(ticker_name, period="1mo", verbose=False):
     
     # adicionando algumas colunas uteis
     data["% Change"] = data["Close"].pct_change() * 100 # variação percentual entre o elemento atual e o anterior
-    data['MM_7'] = data['Close'].rolling(window=7).mean()
-    data['MM_15'] = data['Close'].rolling(window=15).mean()
+
+    data['MM_7']     = data['Close'].rolling(window=7).mean()
+    data['MM_15']    = data['Close'].rolling(window=15).mean()
+    data['Delta_MM'] = data['MM_7'] - data["MM_15"]
+    
+    data['Raised'] = np.where(data["% Change"] > 0, 1, 0)
+    data['Next Raised'] = data['Raised'].shift(-1)
+
     if verbose:
         print("Dados dos últimos 5 dias:", data[["Close", "% Change"]].tail(), sep="\n")
     
