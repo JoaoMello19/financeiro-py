@@ -31,8 +31,6 @@ def plot_last_closings(data, ticker_name, period):
     sns.set_theme()
     fig, ax = plt.subplots(2, 1, figsize=(12, 8), sharex=True)
 
-    data = data.dropna(subset=['MM_7', 'MM_15'])
-
     add_graph1(ax[0])
     add_graph2(ax[1])
 
