@@ -7,7 +7,7 @@ def get_ticker_data(ticker_name: str, period: str = "1y"):
     Retorna um DataFrame com os dados de um ticker.
     """
     ticker = yf.Ticker(ticker_name)
-    data = ticker.history(period=period)[['Open', 'High', 'Low', 'Close', 'Volume']]
+    data = ticker.history(period=period)[['Close', 'Volume']]
 
     if data.empty:
         return None
@@ -20,19 +20,12 @@ def get_ticker_data(ticker_name: str, period: str = "1y"):
     data["% Change"] = data["Close"].pct_change() * 100
 
     # médias móveis
-    data['MM_7']  = data['Close'].rolling(window=7).mean()
     data['MM_15'] = data['Close'].rolling(window=15).mean()
 
     # diferença das médias móveis
-    data["Delta_7"]  = data["Close"] - data['MM_7']
     data["Delta_15"] = data["Close"] - data['MM_15']
-    data['Delta_MM'] = data['MM_7'] - data["MM_15"]
 
     # lags (dados de dias anteriores)
-    data['Lag_1'] = data['Close'].shift(-1)
-    data['Lag_2'] = data['Close'].shift(-2)
-    data['Lag_3'] = data['Close'].shift(-3)
-    data['Lag_4'] = data['Close'].shift(-4)
     data['Lag_5'] = data['Close'].shift(-5)
 
     # oscilação (subiu ou desceu)

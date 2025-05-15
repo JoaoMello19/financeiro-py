@@ -10,14 +10,13 @@ from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_sc
 def preprocess(data):
     # Padronização com Z-Score
     standard_columns = [
-        'Open', 'High', 'Low', 'Close', 'MM_7', 'MM_15',
-        'Lag_1', 'Lag_2', 'Lag_3', 'Lag_4', 'Lag_5'
+        'Close', 'MM_15','Lag_5'
     ]
     standard_scaler = StandardScaler()
     data[standard_columns] = standard_scaler.fit_transform(data[standard_columns])
 
     # Padronização robusta para colunas com outliers
-    robust_columns = ['Volume', '% Change', 'Delta_7', 'Delta_15', 'Delta_MM']
+    robust_columns = ['Volume', '% Change', 'Delta_15']
     robust_scaler = RobustScaler()
     data[robust_columns] = robust_scaler.fit_transform(data[robust_columns])
 

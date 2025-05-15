@@ -1,5 +1,6 @@
 import json
 import models
+import plots
 import tickers
 
 
@@ -8,6 +9,10 @@ RESULTS = {}
 
 for ticker in TICKERS:
     data = tickers.get_ticker_data(ticker)
+
+    # gráficos sobre os dados
+    plots.plot_last_closings(data, ticker)
+    plots.plot_covariance(data, ticker)
 
     # pré-processando
     data = models.preprocess(data)
