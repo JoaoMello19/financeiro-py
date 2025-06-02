@@ -16,7 +16,7 @@ for ticker in TICKERS:
     plots.plot_covariance(data, ticker)
 
     data, discarted = models.filter_features(data)
-    # print('Colunas descartadas:', discarted)
+    print(f'Colunas descartadas {ticker}: {discarted}')
 
     plots.plot_covariance(data, ticker, title_sufix="descarte")
 

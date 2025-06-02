@@ -24,6 +24,10 @@ def get_ticker_data(ticker_name: str, period: str = "1y"):
     # diferença percentual
     data["% Change"] = data["Close"].pct_change() * 100
 
+    # oscilação (subiu ou desceu)
+    data['Raised'] = np.where(data["% Change"] > 0, 1, 0)
+    data['Next Raised'] = np.where(data["% Change"].shift(-1) > 0, 1, 0)
+
     # médias móveis
     data['MM_7']  = data['Close'].rolling(window=7).mean()
     data['MM_15'] = data['Close'].rolling(window=15).mean()
@@ -34,15 +38,17 @@ def get_ticker_data(ticker_name: str, period: str = "1y"):
     data['Delta_MM'] = data['MM_7'] - data["MM_15"]
 
     # lags (dados de dias anteriores)
-    data['Lag_1'] = data['Close'].shift(-1)
-    data['Lag_2'] = data['Close'].shift(-2)
-    data['Lag_3'] = data['Close'].shift(-3)
-    data['Lag_4'] = data['Close'].shift(-4)
-    data['Lag_5'] = data['Close'].shift(-5)
+    data['Lag_1'] = data['Close'].shift(1)
+    data['Lag_2'] = data['Close'].shift(2)
+    data['Lag_3'] = data['Close'].shift(3)
+    data['Lag_4'] = data['Close'].shift(4)
+    data['Lag_5'] = data['Close'].shift(5)
 
-    # oscilação (subiu ou desceu)
-    data['Raised'] = np.where(data["% Change"] > 0, 1, 0)
-    data['Next Raised'] = np.where(data["% Change"].shift(-1) > 0, 1, 0)
+    data['LagR_1'] = data['Raised'].shift(1)
+    data['LagR_2'] = data['Raised'].shift(2)
+    data['LagR_3'] = data['Raised'].shift(3)
+    data['LagR_4'] = data['Raised'].shift(4)
+    data['LagR_5'] = data['Raised'].shift(5)
 
     # retorna apenas os dados válidos
     return data.dropna()

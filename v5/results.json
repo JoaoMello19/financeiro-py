@@ -1,137 +1,203 @@
 {
     "AAPL": {
         "SVM": {
-            "Accuracy": 0.5833333333333334,
-            "Precision": 0.5833333333333334,
-            "Recall": 1.0,
-            "F1 Score": 0.7368421052631579,
+            "Accuracy": 0.4166666666666667,
+            "Precision": 1.0,
+            "Recall": 0.0,
+            "F1 Score": 0.0,
             "Confusion Matrix": [
                 [
-                    0,
-                    10
+                    10,
+                    0
                 ],
                 [
-                    0,
-                    14
+                    14,
+                    0
                 ]
             ]
         },
         "MLP": {
-            "Accuracy": 0.5833333333333334,
-            "Precision": 0.5833333333333334,
-            "Recall": 1.0,
-            "F1 Score": 0.7368421052631579,
+            "Accuracy": 0.25,
+            "Precision": 0.375,
+            "Recall": 0.42857142857142855,
+            "F1 Score": 0.4,
             "Confusion Matrix": [
                 [
                     0,
                     10
                 ],
                 [
-                    0,
-                    14
+                    8,
+                    6
                 ]
             ]
         },
         "RANDOM FOREST": {
-            "Accuracy": 0.5833333333333334,
-            "Precision": 0.6,
-            "Recall": 0.8571428571428571,
-            "F1 Score": 0.7058823529411765,
+            "Accuracy": 0.5,
+            "Precision": 0.55,
+            "Recall": 0.7857142857142857,
+            "F1 Score": 0.6470588235294118,
             "Confusion Matrix": [
                 [
-                    2,
-                    8
+                    1,
+                    9
                 ],
                 [
-                    2,
-                    12
+                    3,
+                    11
                 ]
             ]
         },
         "XGBOOST": {
-            "Accuracy": 0.625,
-            "Precision": 0.631578947368421,
-            "Recall": 0.8571428571428571,
-            "F1 Score": 0.7272727272727273,
+            "Accuracy": 0.4166666666666667,
+            "Precision": 0.5,
+            "Recall": 0.6428571428571429,
+            "F1 Score": 0.5625,
             "Confusion Matrix": [
                 [
-                    3,
-                    7
+                    1,
+                    9
                 ],
                 [
-                    2,
-                    12
+                    5,
+                    9
                 ]
             ]
         }
     },
     "PETR4.SA": {
         "SVM": {
-            "Accuracy": 0.5416666666666666,
-            "Precision": 1.0,
-            "Recall": 0.0,
-            "F1 Score": 0.0,
+            "Accuracy": 0.5,
+            "Precision": 0.5,
+            "Recall": 1.0,
+            "F1 Score": 0.6666666666666666,
             "Confusion Matrix": [
                 [
-                    13,
-                    0
+                    0,
+                    12
                 ],
                 [
-                    11,
-                    0
+                    0,
+                    12
                 ]
             ]
         },
         "MLP": {
-            "Accuracy": 0.5416666666666666,
+            "Accuracy": 0.5,
             "Precision": 1.0,
             "Recall": 0.0,
             "F1 Score": 0.0,
             "Confusion Matrix": [
                 [
-                    13,
+                    12,
                     0
                 ],
                 [
-                    11,
+                    12,
                     0
                 ]
             ]
         },
         "RANDOM FOREST": {
             "Accuracy": 0.5,
-            "Precision": 0.47058823529411764,
-            "Recall": 0.7272727272727273,
-            "F1 Score": 0.5714285714285714,
+            "Precision": 0.5,
+            "Recall": 0.9166666666666666,
+            "F1 Score": 0.6470588235294118,
             "Confusion Matrix": [
                 [
-                    4,
-                    9
+                    1,
+                    11
                 ],
                 [
-                    3,
-                    8
+                    1,
+                    11
                 ]
             ]
         },
         "XGBOOST": {
-            "Accuracy": 0.5,
-            "Precision": 0.47058823529411764,
-            "Recall": 0.7272727272727273,
-            "F1 Score": 0.5714285714285714,
+            "Accuracy": 0.4583333333333333,
+            "Precision": 0.4666666666666667,
+            "Recall": 0.5833333333333334,
+            "F1 Score": 0.5185185185185185,
             "Confusion Matrix": [
                 [
                     4,
-                    9
+                    8
                 ],
                 [
-                    3,
-                    8
+                    5,
+                    7
                 ]
             ]
         }
     },
     "IVVB11.SA": {
+        "SVM": {
+            "Accuracy": 0.5833333333333334,
+            "Precision": 0.5833333333333334,
+            "Recall": 1.0,
+            "F1 Score": 0.7368421052631579,
+            "Confusion Matrix": [
+                [
+                    0,
+                    10
+                ],
+                [
+                    0,
+                    14
+                ]
+            ]
+        },
+        "MLP": {
+            "Accuracy": 0.3333333333333333,
+            "Precision": 0.4166666666666667,
+            "Recall": 0.35714285714285715,
+            "F1 Score": 0.38461538461538464,
+            "Confusion Matrix": [
+                [
+                    3,
+                    7
+                ],
+                [
+                    9,
+                    5
+                ]
+            ]
+        },
+        "RANDOM FOREST": {
+            "Accuracy": 0.5416666666666666,
+            "Precision": 1.0,
+            "Recall": 0.21428571428571427,
+            "F1 Score": 0.35294117647058826,
+            "Confusion Matrix": [
+                [
+                    10,
+                    0
+                ],
+                [
+                    11,
+                    3
+                ]
+            ]
+        },
+        "XGBOOST": {
+            "Accuracy": 0.5833333333333334,
+            "Precision": 0.8333333333333334,
+            "Recall": 0.35714285714285715,
+            "F1 Score": 0.5,
+            "Confusion Matrix": [
+                [
+                    9,
+                    1
+                ],
+                [
+                    9,
+                    5
+                ]
+            ]
+        }
+    },
+    "VALE3.SA": {
         "SVM": {
             "Accuracy": 0.4166666666666667,
             "Precision": 1.0,
@@ -149,182 +215,116 @@
             ]
         },
         "MLP": {
-            "Accuracy": 0.5833333333333334,
-            "Precision": 0.5833333333333334,
-            "Recall": 1.0,
-            "F1 Score": 0.7368421052631579,
+            "Accuracy": 0.2916666666666667,
+            "Precision": 0.2,
+            "Recall": 0.07142857142857142,
+            "F1 Score": 0.10526315789473684,
             "Confusion Matrix": [
                 [
-                    0,
-                    10
-                ],
-                [
-                    0,
-                    14
-                ]
-            ]
-        },
-        "RANDOM FOREST": {
-            "Accuracy": 0.5,
-            "Precision": 0.6666666666666666,
-            "Recall": 0.2857142857142857,
-            "F1 Score": 0.4,
-            "Confusion Matrix": [
-                [
-                    8,
-                    2
-                ],
-                [
-                    10,
+                    6,
                     4
-                ]
-            ]
-        },
-        "XGBOOST": {
-            "Accuracy": 0.4166666666666667,
-            "Precision": 0.5,
-            "Recall": 0.14285714285714285,
-            "F1 Score": 0.2222222222222222,
-            "Confusion Matrix": [
-                [
-                    8,
-                    2
                 ],
                 [
-                    12,
-                    2
-                ]
-            ]
-        }
-    },
-    "VALE3.SA": {
-        "SVM": {
-            "Accuracy": 0.5,
-            "Precision": 1.0,
-            "Recall": 0.0,
-            "F1 Score": 0.0,
-            "Confusion Matrix": [
-                [
-                    12,
-                    0
-                ],
-                [
-                    12,
-                    0
-                ]
-            ]
-        },
-        "MLP": {
-            "Accuracy": 0.5,
-            "Precision": 0.5,
-            "Recall": 1.0,
-            "F1 Score": 0.6666666666666666,
-            "Confusion Matrix": [
-                [
-                    0,
-                    12
-                ],
-                [
-                    0,
-                    12
+                    13,
+                    1
                 ]
             ]
         },
         "RANDOM FOREST": {
             "Accuracy": 0.5833333333333334,
-            "Precision": 0.5833333333333334,
-            "Recall": 0.5833333333333334,
-            "F1 Score": 0.5833333333333334,
-            "Confusion Matrix": [
-                [
-                    7,
-                    5
-                ],
-                [
-                    5,
-                    7
-                ]
-            ]
-        },
-        "XGBOOST": {
-            "Accuracy": 0.5833333333333334,
-            "Precision": 0.5714285714285714,
-            "Recall": 0.6666666666666666,
+            "Precision": 0.6666666666666666,
+            "Recall": 0.5714285714285714,
             "F1 Score": 0.6153846153846154,
             "Confusion Matrix": [
                 [
                     6,
-                    6
+                    4
                 ],
                 [
-                    4,
+                    6,
                     8
+                ]
+            ]
+        },
+        "XGBOOST": {
+            "Accuracy": 0.5833333333333334,
+            "Precision": 0.6111111111111112,
+            "Recall": 0.7857142857142857,
+            "F1 Score": 0.6875,
+            "Confusion Matrix": [
+                [
+                    3,
+                    7
+                ],
+                [
+                    3,
+                    11
                 ]
             ]
         }
     },
     "BTC-USD": {
         "SVM": {
-            "Accuracy": 0.37142857142857144,
+            "Accuracy": 0.4166666666666667,
             "Precision": 1.0,
             "Recall": 0.0,
             "F1 Score": 0.0,
             "Confusion Matrix": [
                 [
-                    13,
+                    15,
                     0
                 ],
                 [
-                    22,
+                    21,
                     0
                 ]
             ]
         },
         "MLP": {
-            "Accuracy": 0.6285714285714286,
-            "Precision": 0.6285714285714286,
-            "Recall": 1.0,
-            "F1 Score": 0.7719298245614035,
+            "Accuracy": 0.4166666666666667,
+            "Precision": 1.0,
+            "Recall": 0.0,
+            "F1 Score": 0.0,
             "Confusion Matrix": [
                 [
-                    0,
-                    13
+                    15,
+                    0
                 ],
                 [
-                    0,
-                    22
+                    21,
+                    0
                 ]
             ]
         },
         "RANDOM FOREST": {
-            "Accuracy": 0.4,
-            "Precision": 0.6666666666666666,
-            "Recall": 0.09090909090909091,
+            "Accuracy": 0.4166666666666667,
+            "Precision": 0.5,
+            "Recall": 0.09523809523809523,
             "F1 Score": 0.16,
             "Confusion Matrix": [
                 [
-                    12,
-                    1
+                    13,
+                    2
                 ],
                 [
-                    20,
+                    19,
                     2
                 ]
             ]
         },
         "XGBOOST": {
-            "Accuracy": 0.42857142857142855,
-            "Precision": 0.5833333333333334,
-            "Recall": 0.3181818181818182,
-            "F1 Score": 0.4117647058823529,
+            "Accuracy": 0.4722222222222222,
+            "Precision": 0.625,
+            "Recall": 0.23809523809523808,
+            "F1 Score": 0.3448275862068966,
             "Confusion Matrix": [
                 [
-                    8,
-                    5
+                    12,
+                    3
                 ],
                 [
-                    15,
-                    7
+                    16,
+                    5
                 ]
             ]
         }
